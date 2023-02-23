@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.ttf") format("woff"), url("../fonts/icons.woff2") format("woff2");
+    font-display: swap;
+    font-display: block;
+    font-style: normal;
+    font-weight: normal;
+  }
+  %ic {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-asx-font-smoothing: grasyscale;
+  }
+  
+  [class^="icon-"],
+  [class*="icon-"] {
+    &::before {
+      @extend %ic;
+      display: block;
+    }
+}
+
+.icon-brand5 .path1:before {
+  content: "\e900";
+  color: rgb(0, 0, 0);
+}
+.icon-brand5 .path2:before {
+  content: "\e901";
+  margin-left: -5.0283203125em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-brand5 .path3:before {
+  content: "\e902";
+  margin-left: -5.0283203125em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-brand5 .path4:before {
+  content: "\e903";
+  margin-left: -5.0283203125em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-brand5 .path5:before {
+  content: "\e904";
+  margin-left: -5.0283203125em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-brand5 .path6:before {
+  content: "\e905";
+  margin-left: -5.0283203125em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-brand2:before {
+  content: "\e906";
+}
+.icon-brand3:before {
+  content: "\e907";
+}
+.icon-decor-star:before {
+  content: "\e908";
+}
+.icon-decot:before {
+  content: "\e909";
+}
+.icon-account:before {
+  content: "\e90a";
+}
+.icon-bank:before {
+  content: "\e90c";
+}
+.icon-brand1:before {
+  content: "\e90d";
+}
+.icon-brand4:before {
+  content: "\e90e";
+}
+.icon-decor-money:before {
+  content: "\e90f";
+}
+.icon-decor-solid-star:before {
+  content: "\e910";
+}
+.icon-dollar:before {
+  content: "\e911";
+}
+.icon-dowload:before {
+  content: "\e912";
+}
+.icon-instagram:before {
+  content: "\e914";
+}

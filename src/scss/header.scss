@@ -1,0 +1,214 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: header 0.6s ease-in-out;
+    transition: background-color 0.3s ease 0s;
+    &.scroll {
+        background-color: #1e272c;
+        
+        .header__container {
+            min-height: rem(90);
+        }
+    }
+
+    &__container {
+        min-height: rem(184);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: min-height 0.3s ease 0s;
+        column-gap: rem(15);
+        @media (min-width: $md1){
+            min-height: rem(140);
+        }
+        @media (max-width: $md2){
+            min-height: rem(100);
+        }
+        @media (max-width: $md3){
+            min-height: rem(90);
+        }
+    }
+
+    &__logo {
+        @media (max-width: $md2){
+            order: 2;
+        }
+    }
+
+    &__menu {
+        @media (max-width: $md2){
+            order: 3;
+        }
+    }
+
+    &__buttons {
+        @media (max-width: $md2){
+            order: 1;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: rem(16);
+        position: relative;
+    }
+
+    &__button {
+        @media (max-width: $md2){
+            &:first-child{
+                display: inline-block;
+            }
+            &_started{
+                margin-top: rem(15);
+            }
+        }
+    }
+}
+
+.container {}
+
+.logo {
+    font-family: 'Lato';
+    font-weight: 500;
+    @include adaptiv-value('font-size', 36, 22, 1);
+    color: #fff;
+    line-height: perc(43, 36);
+    position: relative;
+    z-index: 2;
+}
+
+.menu {
+    font-family: 'Lato';
+
+    &__icon {
+        @media (min-width: $md2) {
+            display: none;
+        }
+
+        display: block;
+        width: rem(35);
+        height: rem(22);
+        position: relative;
+        z-index: 5;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        &::after,
+        &::before,
+        >span::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1.5px;
+            background: #fff;
+            right: 0;
+            transition: all 0.5s ease 0s;
+        }
+
+        &::after {
+            top: 0;
+        }
+
+        &::before {
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        >span::after {
+            bottom: 0;
+        }
+
+        &.active {
+            >span::after {
+                transform: scale(0);
+            }
+
+            &::before {
+                top: 50%;
+                transform: translate(0, -50%) rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg) translate(0, -50%);
+                top: 50%;
+            }
+        }
+    }
+
+    &__body {
+        @media (max-width: $md2){
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: #1e272c;
+            padding: rem(110) rem(10) rem(30) rem(10);
+            left: -100%;
+            opacity: 0;
+            overflow: auto;
+            transition: left 0.4s ease 0s, opacity 0.4s ease 0s;
+            &::after{
+                content: "";
+                position: fixed;
+                top: 0;
+                left: -100%;
+                opacity: 0;
+                width: 100%;
+                height: rem(100);
+                background: #1e272c;
+                transition: left 0.4s ease 0s, opacity 0.4s ease 0s;
+                @media (max-width: $md3){
+                    height: rem(90);
+                }
+            }
+            @media (max-width: $md3){
+                padding-top: rem(80);
+            }
+            &.open{
+                left: 0;
+                opacity: 1;
+                &::after{
+                    left: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__list {
+        @media (min-width: $md2){
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: rem(44);
+            row-gap: rem(10);
+        }
+        li {
+            line-height: perc(22, 18);
+            @media (max-width: $md2){
+                font-size: rem(35);
+                padding: rem(10) 0;
+            }
+        }
+    }
+
+    &__link {
+        color: inherit;
+        @media (any-hover: hover) {
+            transition: color 0.3s ease 0s;
+
+            &:hover {
+                color: $Green;
+            }
+        }
+    }
+}
+@keyframes header{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
