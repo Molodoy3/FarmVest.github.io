@@ -4,6 +4,7 @@
     top: 0;
     left: 0;
     animation: header 0.6s ease-in-out;
+    z-index: 50;
     transition: background-color 0.3s ease 0s;
     &.scroll {
         background-color: #1e272c;
@@ -20,7 +21,7 @@
         justify-content: space-between;
         transition: min-height 0.3s ease 0s;
         column-gap: rem(15);
-        @media (min-width: $md1){
+        @media (max-width: $md1){
             min-height: rem(140);
         }
         @media (max-width: $md2){
