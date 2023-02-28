@@ -1,0 +1,189 @@
+.footer {
+
+    &__container {}
+
+    &__top {
+        @include adaptiv-value('padding-bottom', 100, 30, 1);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+
+        @include adaptiv-value('column-gap', 186, 25, 1);
+        row-gap: rem(25);
+
+        &.animated {
+            .footer__column {
+                opacity: 1;
+                transform: scale(1);
+                transition: transform 0.6s ease 0s, opacity 0.6s ease 0s;
+
+                &:nth-last-child(1) {
+                    transition: transform 0.6s ease 0.6s, opacity 0.6s ease 0.6s;
+                }
+
+                &:nth-last-child(2) {
+                    transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s;
+                }
+
+                &:nth-last-child(3) {
+                    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s;
+                }
+            }
+        }
+    }
+
+    &__column {
+        opacity: 0;
+        transform: scale(0);
+        >* {
+            &:not(:last-child) {
+                margin-bottom: rem(24);
+            }
+        }
+    }
+
+    &__logo {}
+
+    &__text {
+        line-height: 177%;
+        max-width: 400px;
+    }
+
+    &__form {
+        max-width: none;
+        width: 100%;
+
+        input {
+            min-width: rem(120);
+        }
+    }
+
+    &__contacts {}
+
+    &__bottom {
+
+        &.animated{
+            .bottom-footer__body{
+                opacity: 1;
+                transform: translateY(0);
+                transition: transform 0.6s ease 0.8s, opacity 0.6s ease 0.8s;
+            }
+
+        }
+    }
+}
+
+.contacts-footer {
+    @include adaptiv-value('gap', 48, 20, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__column {
+        flex: 1 1 auto;
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: perc(18, 16);
+        margin-bottom: em(24, 16);
+    }
+
+    &__social {}
+
+    &__tel {
+        color: inherit;
+        line-height: perc(19, 16);
+        font-size: rem(16);
+
+        @media (any-hover: hover) {
+            transition: color 0.3s ease 0s;
+
+            &:hover {
+                color: $Green;
+            }
+        }
+    }
+}
+
+.social {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: rem(16);
+
+    &__item {
+        flex: 0 0 rem(48);
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $Green;
+        font-size: rem(28);
+        background-color: #fff;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+
+        @media (any-hover: hover) {
+            transition: background-color 0.3s ease 0s;
+
+            &:hover {
+                background-color: #23b1234d;
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.bottom-footer {
+    &__body{
+        border-top: 1px solid rgba(255, 255, 255, 0.42);
+        @include adaptiv-value('padding-top', 56, 25, 1);
+        @include adaptiv-value('padding-bottom', 56, 25, 1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: rem(20);
+        font-size: rem(12);
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    &__copy {
+        line-height: perc(13, 12);
+    }
+
+    &__nav {}
+}
+
+.nav-footer {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @include adaptiv-value('column-gap', 40, 15, 1);
+        row-gap: rem(15);
+    }
+
+    &__item {}
+
+    &__link {
+        line-height: perc(13, 12);
+        color: inherit;
+
+        @media (any-hover: hover) {
+            transition: color 0.3s ease 0s;
+
+            &:hover {
+                color: $Green;
+            }
+        }
+    }
+}

@@ -9,6 +9,7 @@ import {delegationClick} from './modules/script.js';
 import {headerScroll} from './modules/script.js';
 import { animOnScroll } from './modules/animOnScroll.js';
 import { formValidate } from './modules/formValidate.js';
+import { initSpollers } from './modules/spollers.js';
 
 window.addEventListener("load", windowLoad);
 function windowLoad() {
@@ -18,4 +19,5 @@ function windowLoad() {
     delegationClick();
     DynamicAdapt();
     formValidate();
+    initSpollers();
 }

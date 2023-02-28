@@ -1,4 +1,4 @@
-export function delegationClick(){
+export function delegationClick() {
     document.addEventListener('click', documentActions)
     function documentActions(e) {
         const targetElement = e.target;
@@ -8,40 +8,39 @@ export function delegationClick(){
             document.querySelector('.menu__body').classList.toggle('open');
             document.body.classList.toggle('lock');
         }
-        //Плавный скролл навигации
-        /*         if (targetElement.closest('[data-goto]')){
-                    if(targetElement.closest('.menu__link')){
-                    document.querySelector('.menu__body').classList.remove('open');
-                    document.querySelector('.menu__icon').classList.remove('active');
-                    document.body.classList.remove('lock');
+        if (targetElement.closest('[data-goto]')) {
+            if (targetElement.closest('.menu__link')) {
+                document.querySelector('.menu__body').classList.remove('open');
+                document.querySelector('.menu__icon').classList.remove('active');
+                document.body.classList.remove('lock');
+            }
+            const link = targetElement.closest('[data-goto]');
+            const goToBlock = document.querySelector(link.dataset.goto);
+            if (goToBlock) {
+                let goToBlockValue = goToBlock.getBoundingClientRect().top + scrollY;
+                const header = document.querySelector('.header');
+                if (header) {
+                    goToBlockValue -= header.offsetHeight;
                 }
-                const link = targetElement.closest('[data-goto]');
-                const goToBlock = document.querySelector(link.dataset.goto);
-                if(goToBlock){
-                    let goToBlockValue = goToBlock.getBoundingClientRect().top + scrollY;
-                    const header = document.querySelector('.header');
-                    if(header){
-                        goToBlockValue -= header.offsetHeight;
-                    }
-                    window.scrollTo({
-                        top: goToBlockValue,
-                        behavior: "smooth"
-                    });
-                    e.preventDefault();
-                }
-            } */
+                window.scrollTo({
+                    top: goToBlockValue,
+                    behavior: "smooth"
+                });
+                e.preventDefault();
+            }
+        }
     }
 }
-export function headerScroll(){
+export function headerScroll() {
     const header = document.querySelector('.header');
-    if(header){
-        if(window.scrollY > 0){
+    if (header) {
+        if (window.scrollY > 0) {
             header.classList.add('scroll');
         }
         window.addEventListener('scroll', () => {
-            if(window.scrollY > 0){
+            if (window.scrollY > 0) {
                 header.classList.add('scroll');
-            } else{
+            } else {
                 header.classList.remove('scroll');
             }
         });

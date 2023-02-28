@@ -77,6 +77,11 @@
     line-height: perc(43, 36);
     position: relative;
     z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    img{
+        margin-right: rem(10);
+    }
 }
 
 .menu {

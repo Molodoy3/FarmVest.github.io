@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>FarmVest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@400;500;700&display=swap&_v=20230226212742" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230226212742">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@400;500;700&display=swap&_v=20230228214257" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230228214257">
+    <link rel='shortcut icon' href='img/logo.svg'>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
-    <div class='header__container'>
+    <div class='header__container header__container_big'>
         <a href="index.html" class="header__logo logo">FarmVest</a>
         <div class='header__menu menu'>
             <div class='menu__icon'>
@@ -22,10 +23,10 @@
             </div>
             <nav class='menu__body'>
                 <ul class='menu__list'>
-                    <li><a href='' class='menu__link'>Home</a></li>
-                    <li><a href='' class='menu__link'>About</a></li>
-                    <li><a href='' class='menu__link'>Features</a></li>
-                    <li><a href='' class='menu__link'>How it works</a></li>
+                    <li><a href='index.html' class='menu__link'>Home</a></li>
+                    <li><a data-goto="#about" href='#about' class='menu__link'>About</a></li>
+                    <li><a data-goto="#features" href='#features' class='menu__link'>Features</a></li>
+                    <li><a data-goto="#how-it-works" href='#how-it-works' class='menu__link'>How it works</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,8 +37,8 @@
     </div>
 </header>
         <div class="page">
-            <section class="main-block">
-                <div class='main-block__container'>
+            <section class="main-block" id="about">
+                <div class='main-block__container main-block__container_big'>
                     <div class="main-block__body">
                         <h1 data-anim class="main-block__title title">The easiest and fastest way to <span>Invest</span>
                             in Agriculture</h1>
@@ -101,7 +102,7 @@
                     </a>
                 </div>
             </div>
-            <div class="how-works">
+            <section class="how-works" id="how-it-works">
                 <div class='how-works__container'>
                     <div data-anim class="how-works__content">
                         <h2 data-anim class="how-works__title title">How <span>FarmVest</span> Works</h2>
@@ -162,15 +163,200 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <section class="pathway">
+                <div class='pathway__container'>
+                    <div data-anim class="pathway__picture picture">
+                        <div class="pathway__circle pathway__circle_1 circle-decor"></div>
+                        <div class="pathway__circle pathway__circle_2 circle-decor"></div>
+                        <div class="picture__image">
+                            <picture>
+                                <source srcset='img/pathway/01.webp' type='image/webp'>
+                                <img src='img/pathway/01.jpg' alt='man'>
+                            </picture>
+                        </div>
+                    </div>
+                    <div data-anim class="pathway__content">
+                        <h3 class="pathway__title title" data-anim>Your <span>pathway</span> to Future Investment</h3>
+                        <div class="pathway__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu, mollis aenean sit dictum
+                            tincidunt. Ut arcu, suscipit ac etLorem ipsum dolor sit amet.Lorem ipsum dolor sit amet,
+                            consectetur
+                        </div>
+                        <div data-spollers data-one-spoller class='pathway__spollers spollers-pathway'>
+                            <div class='spollers-pathway__item'>
+                                <button data-spoller tabindex='-1' type='button'
+                                    class='spollers-pathway__title icon-arrow'>What is FarmVest?</button>
+                                <div class='spollers-pathway__content'>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint consectetur ducimus
+                                    aperiam dicta repudiandae numquam dolore soluta inventore eligendi id.
+                                </div>
+                            </div>
+                            <div class='spollers-pathway__item'>
+                                <button data-spoller tabindex='-1' type='button'
+                                    class='spollers-pathway__title icon-arrow'>How safe is FarmVest</button>
+                                <div class='spollers-pathway__content'>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </div>
+                            </div>
+                            <div class='spollers-pathway__item'>
+                                <button data-spoller tabindex='-1' type='button'
+                                    class='spollers-pathway__title icon-arrow'>What do I gain from using
+                                    FarmVest?</button>
+                                <div class='spollers-pathway__content'>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint consectetur ducimus
+                                    aperiam dicta repudiandae numquam dolore soluta
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="why-FarmVest" id="features">
+                <div class='why-FarmVest__container'>
+                    <div class="why-FarmVest__content" data-anim>
+                        <h4 data-anim class="why-FarmVest__title title">Why choose <span>FarmVest</span></h4>
+                        <div class="why-FarmVest__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu,
+                            mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac</div>
+                        <ul class="why-FarmVest__list list-why-FarmVest">
+                            <li class="list-why-FarmVest__item">
+                                <div class="list-why-FarmVest__item-body">
+                                    <div class="list-why-FarmVest__numb"><span>1</span></div>
+                                    <div class="list-why-FarmVest__text">Real-time Checkup</div>
+                                </div>
+                            </li>
+                            <li class="list-why-FarmVest__item">
+                                <div class="list-why-FarmVest__item-body">
+                                    <div class="list-why-FarmVest__numb"><span>2</span></div>
+                                    <div class="list-why-FarmVest__text">Flexibility in Investment</div>
+                                </div>
+                            </li>
+                            <li class="list-why-FarmVest__item">
+                                <div class="list-why-FarmVest__item-body">
+                                    <div class="list-why-FarmVest__numb"><span>3</span></div>
+                                    <div class="list-why-FarmVest__text">Encrypted and Secured</div>
+                                </div>
+                            </li>
+                            <li class="list-why-FarmVest__item">
+                                <div class="list-why-FarmVest__item-body">
+                                    <div class="list-why-FarmVest__numb"><span>4</span></div>
+                                    <div class="list-why-FarmVest__text">Withdraw Anytime</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="" class="why-FarmVest__button button">Learm More</a>
+                    </div>
+                    <div class="why-FarmVest__image" data-anim>
+                        <picture>
+                            <source srcset='img/whyFarmVest/01.webp' type='image/webp'>
+                            <img src='img/whyFarmVest/01.jpg' alt='women'>
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="customers">
+                <div class='customers__container'>
+                    <h1 data-anim class="customers__title title">What <span>Customers</span> have to say</h1>
+                    <div data-anim class="customers__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu, mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac</div>
+                    <div data-anim class="customers__cards">
+                        <div class="customers__card card-customers">
+                            <div class="card-customers__image">
+                                <picture>
+                                    <source srcset='img/customers/01.webp' type='image/webp'>
+                                    <img src='img/customers/01.jpg' alt='women'>
+                                </picture>
+                            </div>
+                            <div class="card-customers__body">
+                                <div class="card-customers__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu, mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac</div>
+                                <div class="card-customers__author">Tonia Smart</div>
+                            </div>
+                        </div>
+                        <div class="customers__card card-customers">
+                            <div class="card-customers__image">
+                                <picture>
+                                    <source srcset='img/customers/02.webp' type='image/webp'>
+                                    <img src='img/customers/02.jpg' alt='women'>
+                                </picture>
+                            </div>
+                            <div class="card-customers__body">
+                                <div class="card-customers__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu, mollis aenean sit dictum tincidunt. Ut arcu, suscipit ac</div>
+                                <div class="card-customers__author">Grace Obi</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customers__bottom">
+                        <a data-anim href="" class="customers__button button">View All</a>
+                    </div>
+                </div>
+            </section>
+            <section class="download">
+                <div class='download__container'>
+                    <div class="download__body" data-anim>
+                        <div class="download__circle download__circle_1 circle-decor"></div>
+                        <div class="download__circle download__circle_2 circle-decor"></div>
+                        <h3 class="download__title title" data-anim>Download <span>FarmVest app</span>
+                            and invest in your future</h3>
+                        <div class="download__stores">
+                            <a href="" class="download__strore"><img src='img/icons/sprite.svg#appStore' alt='appStore'></a>
+                            <a href="" class="download__strore"><img src='img/icons/sprite.svg#googlePlay' alt='appStore'></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <footer class="footer">
-    <div class='footer__container container'>
-        
+    <div class='footer__container footer__container_big'>
+        <div data-anim class="footer__top">
+            <div class="footer__column">
+                <a href="index.html" class="footer__logo logo">
+                    <img src='img/logo.svg' alt='logo'>
+                    FarmVest
+                </a>
+                <div class="footer__text">High level experience in web design and development knowledge, producing quality work.</div>
+            </div>
+            <div class="footer__column footer__column_big">
+                <div class="footer__text">Subscribe to stay tuned for new web design and latest updates. Let's do it!</div>
+                <form data-anim action="#" class="footer__form main-block__form">
+                    <input type="text" name="email" class="main-block__input req email"
+                        placeholder="Enter your email" data-text-error="Заполните поле">
+                    <button type="submit" class="main-block__button button">Get Started</button>
+                </form>
+            </div>
+            <div class="footer__column">
+                <div class="footer__contacts contacts-footer">
+                    <div class="contacts-footer__column">
+                        <div class="contacts-footer__label">Follow us</div>
+                        <ul class="contacts-footer__social social">
+                            <li class="social__item icon-instagram"><a href="" class="social__link"></a></li>
+                            <li class="social__item icon-drawing"><a href="" class="social__link"></a></li>
+                            <li class="social__item icon-twitter"><a href="" class="social__link"></a></li>
+                        </ul>
+                    </div>
+                    <div class="contacts-footer__column">
+                        <div class="contacts-footer__label">Call us</div>
+                        <a href="tel:2349123456789" class="contacts-footer__tel">+2349123456789</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-anim class="footer__bottom bottom-footer">
+            <div class="bottom-footer__body">
+                <div class="bottom-footer__copy">&#169; 2021 All Rights Reserved</div>
+                <nav class="bottom-footer__nav nav-footer">
+                    <ul class="nav-footer__list">
+                        <li class="nav-footer__item"><a href="" class="nav-footer__link">Privacy Policy</a></li>
+                        <li class="nav-footer__item"><a href="" class="nav-footer__link">Terms of Use</a></li>
+                        <li class="nav-footer__item"><a href="" class="nav-footer__link">Sales and Refunds</a></li>
+                        <li class="nav-footer__item"><a href="" class="nav-footer__link">Legal</a></li>
+                        <li class="nav-footer__item"><a href="" class="nav-footer__link">Site Map</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 </footer>
     </div>
-    <script src="js/app.min.js?_v=20230226212742"></script>
+    <script src="js/app.min.js?_v=20230228214257"></script>
 </body>
 
 </html>
