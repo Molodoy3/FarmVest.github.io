@@ -2216,15 +2216,15 @@ body.load {
   }
 }
 
-@media (max-width: 102rem) {
-  .icons-main-block.animated .icons-main-block__icon {
-    opacity: 0.5;
+@media (max-width: 1632rem) {
+  .header__container {
+    min-height: 8.75rem;
   }
 }
 
-@media (max-width: 88.75rem0.75rem) {
-  .header__container {
-    min-height: 8.75rem;
+@media (max-width: 102rem) {
+  .icons-main-block.animated .icons-main-block__icon {
+    opacity: 0.5;
   }
 }
 
