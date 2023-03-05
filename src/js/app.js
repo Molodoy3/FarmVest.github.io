@@ -10,6 +10,8 @@ import {headerScroll} from './modules/script.js';
 import { animOnScroll } from './modules/animOnScroll.js';
 import { formValidate } from './modules/formValidate.js';
 import { initSpollers } from './modules/spollers.js';
+import { isMobile } from './modules/functions.js';
+import { mprlx } from './modules/parallax-mouse.js';
 
 window.addEventListener("load", windowLoad);
 function windowLoad() {
@@ -20,4 +22,6 @@ function windowLoad() {
     DynamicAdapt();
     formValidate();
     initSpollers();
+    if(!isMobile()) mprlx();
+    
 }
